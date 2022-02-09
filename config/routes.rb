@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'searches/search'
   get 'relationships/followings'
   get 'relationships/followers'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -17,5 +18,5 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "home/about"=>"homes#about"
-  
+  get '/search', to: 'searches#search'
 end
